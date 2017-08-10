@@ -1,0 +1,24 @@
+[user]
+  name = Daiki Arai
+  email = darai0512@yahoo.co.jp
+[github]
+  user = darai0512
+[color]
+  status = auto
+  diff = auto
+  branch = auto
+  ui = true
+[core]
+  excludesfile = ~/.gitignore_global
+  editor = /usr/bin/vim
+[grep]
+  lineNumber = true
+[push]
+  default = current # simple
+[alias]
+  st = status
+  ch = checkout
+  egrep = "grep --heading --break"
+#  pr = "!pr() { git fetch origin pull/$1/head:pr$1;git checkout pr$1; };pr"
+# [ghq]
+#   root = ~/src

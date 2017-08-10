@@ -1,0 +1,39 @@
+escape ^Tt
+shell -$SHELL
+screen 1
+bind c eval 'screen 1'
+deflog on
+logfile "/tmp/screenlog/%Y%m%d-%n.log"
+# bind w windowlist -b
+defscrollback 20000
+
+# 256色表示設定
+term xterm-256color
+# スクロールで履歴表示
+termcapinfo xterm* ti@:te@
+
+# ビジュアルベルを切る
+vbell off
+
+# スタートアップメッセージを消す
+startup_message off
+
+# Function keyをウィンドウに割り当てる
+termcapinfo xterm 'k1=\E[11~:k2=\E[12~:k3=\E[13~:k4=\E[14~'
+bindkey -k k1 select 1
+bindkey -k k2 select 2
+bindkey -k k3 select 3
+bindkey -k k4 select 4
+bindkey -k k5 select 5
+bindkey -k k6 select 6
+bindkey -k k7 select 7
+bindkey -k k8 select 8
+bindkey -k k9 select 9
+bindkey -k k; select 10
+bindkey -k F1 select 11
+bindkey -k F2 select 12
+# 端末が落ちたら自動的にデタッチする
+autodetach on
+
+# status line (w%{= rW}も有り)
+hardstatus alwayslastline "%{=b kW} %H |%{= kW}%-w%{= wW}%n %t%{=b kW}%+w| %=%{w}[%m-%d %02c:%s]"

@@ -1,0 +1,9 @@
+"source ~/.ideavimrc
+se nu
+set t_kD=
+nmap  hx
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
+inoremap <C-h> <Left>
+inoremap  <BS>
