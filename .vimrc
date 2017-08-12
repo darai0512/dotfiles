@@ -1,6 +1,9 @@
 if 0 | endif
 
-" http://route477.net/w/VimMemo.html
+" checking Vimrc read order
+" :set runtimepath
+" :scriptnames
+" https://stackoverflow.com/questions/3495124/not-reading-vimrc
 
 if &compatible
   set nocompatible
@@ -22,15 +25,13 @@ call dein#begin(s:dein_dir)
 " Required:
 call dein#add('Shougo/dein.vim')
 
-call dein#add('Shougo/vimproc.vim', {'build': 'make'})
+call dein#add('Shougo/vimproc.vim', {'build': 'make'}) " 非同期処理化
 " Add or remove your plugins here:
-call dein#add('Shougo/neosnippet.vim')
+call dein#add('Shougo/neocomplcache')
+call dein#add('Shougo/neosnippet.vim') " 補完
 call dein#add('Shougo/neosnippet-snippets')
 call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
 call dein#add('Shougo/unite.vim')
-call dein#add('Shougo/neocomplcache')
-call dein#add('Shougo/neosnippet')
-call dein#add('Shougo/neosnippet-snippets')
 call dein#add('Shougo/neomru.vim')
 call dein#add('Shougo/unite-outline')
 call dein#add('Shougo/vimfiler')
@@ -71,14 +72,14 @@ filetype plugin indent on
 
 
 " Settings
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set encoding=utf-8
 set fileencodings=utf-8,iso-2022-jp,sjis,cp932,euc-jp
 set number
 set backspace=indent,eol,start
 set autoindent
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
 set expandtab
 set clipboard=unnamed
 set display=lastline
@@ -159,25 +160,24 @@ nnoremap [Space]   <Nop>
 " ctags
 nnoremap <C-]> g<C-]>
 
-"nnoremap <C-a> 0
-nnoremap <C-e> $
-nnoremap <C-d> <C-d>zz
-nnoremap <C-u> <C-u>zz
-nnoremap <Space>r :<C-u>source ~/.vimrc<CR>
-nnoremap <Space><TAB> <C-w><C-w>
-
+nnoremap <Space>r :source ~/.vimrc<CR>
 nnoremap q :<C-u>q<CR>
-
-" For cursor moving in insert mode
-inoremap <C-h> <left>
-inoremap <C-j> <down>
-inoremap <C-k> <up>
-inoremap <C-l> <right>
 
 " タブ移動
 nnoremap <silent> tn :<C-u>tabnext<CR>
 nnoremap <silent> tp :<C-u>tabprevious<CR>
 
+" For cursor moving in insert mode
+inoremap <C-h> <left>
+inoremap <C-j> <down>
+inoremap <C-k> <up>
+" inoremap <C-l> <right> " => neosnippet
+
+""""""""""""""""""""""""""""""""""""""""""""""""
+" neosnippet
+imap <expr><C-l> neosnippet#expandable() ? "<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "<C-y>" : "<right>"
+
+imap <expr><TAB> pumvisible() ? "<C-n>" : neosnippet#jumpable() ? "<Plug>(neosnippet_expand_or_jump)" : "<TAB>"
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 " neocomplcache
@@ -226,8 +226,6 @@ endfunction
 " <BS>: close popup and delete backword char.
 inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><C-e>  neocomplcache#cancel_popup()
-" <TAB>: completion.
-" inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " AutoComplPop like behavior.
 "let g:neocomplcache_enable_auto_select = 1
@@ -236,7 +234,6 @@ inoremap <expr><C-e>  neocomplcache#cancel_popup()
 "set completeopt+=longest
 "let g:neocomplcache_enable_auto_select = 1
 "let g:neocomplcache_disable_auto_complete = 1
-"inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<C-x>\<C-u>"
 
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
@@ -256,29 +253,6 @@ let g:neocomplcache_force_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\
 " For perlomni.vim setting.
 " https://github.com/c9s/perlomni.vim
 let g:neocomplcache_force_omni_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""
-" NeoSnippet
-
-" Plugin key-mappings.
-" imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-" smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-" xmap <C-k>     <Plug>(neosnippet_expand_target)
-
-" SuperTab like snippets behavior.
-imap <expr><TAB> pumvisible() ? "\<C-n>"
-                            \ : neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)"
-                                                                  \ : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: "\<TAB>"
-
-" For snippet_complete marker.
-if has('conceal')
-  set conceallevel=2 concealcursor=i
-endif
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 " unite
@@ -446,8 +420,10 @@ let g:switch_definitions =
   \   ['int ', 'unsigned int '],
   \ ]
 
+""""""""""""""""""""""""""""""""""""""""""""""""
 " anzu
 nmap n <Plug>(anzu-n-with-echo)
 nmap N <Plug>(anzu-N-with-echo)
 nmap * <Plug>(anzu-star-with-echo)
 nmap # <Plug>(anzu-sharp-with-echo)
+""""""""""""""""""""""""""""""""""""""""""""""""
