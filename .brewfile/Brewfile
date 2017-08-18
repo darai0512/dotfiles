@@ -55,6 +55,7 @@ brew mpfr
 brew wget
 brew nodejs
 brew pyenv
+brew maven
 brew tree
 brew neovim/neovim/neovim
 
