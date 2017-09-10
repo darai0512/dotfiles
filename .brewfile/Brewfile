@@ -11,6 +11,8 @@ cask 'skitch'
 
 ## browser
 cask 'google-chrome'
+brew tap caskroom/versions
+cask 'google-chrome-canary'
 
 ## programming tool
 cask 'arduino'
