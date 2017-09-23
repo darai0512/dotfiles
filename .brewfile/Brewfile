@@ -22,7 +22,7 @@ cask 'imageoptim'
 cask 'java'
 
 ## display
-cask 'caffeine'
+cask 'insomniax'
 cask 'flux'
 cask 'shiftit'
 
