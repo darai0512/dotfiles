@@ -45,6 +45,7 @@ cask 'vagrant-manager'
 
 tap homebrew/core
 tap neovim/neovim
+# brew neovim/neovim/neovim
 brew fpp
 brew gcc@5
 brew git
@@ -59,7 +60,8 @@ brew nodejs
 brew pyenv
 brew maven
 brew tree
-brew neovim/neovim/neovim
+brew certbot
+brew openssl
 
 tap homebrew/versions
 
