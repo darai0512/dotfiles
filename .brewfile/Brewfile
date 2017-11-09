@@ -57,6 +57,7 @@ brew libmpc
 brew mpfr
 brew wget
 brew nodejs
+brew yarn
 brew pyenv
 brew maven
 brew tree
