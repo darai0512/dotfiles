@@ -13,7 +13,7 @@ fi
 
 export LSCOLORS=fxfxcxdxbxegedabagacad
 export PS1="\[\033[1;32m\][@\H \w]\n(^o^)/~\$\[\033[0m\]"
-export VIMRUNTIME=/usr/share/vim/vim74
+# export VIMRUNTIME=
 # export MAVEN_HOME=/usr/local/apache-maven-3.2.2
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH=${PYENV_ROOT}/bin:${PATH}:${MAVEN_HOME}/bin:/opt/chefdk/embedded/bin
