@@ -77,7 +77,8 @@ set shiftwidth=4
 set softtabstop=4
 set encoding=utf-8
 set fileencodings=utf-8,iso-2022-jp,sjis,cp932,euc-jp
-set number
+set nu
+nnoremap <silent> <C-m> :<C-u>setlocal number!<CR>
 set backspace=indent,eol,start
 set autoindent
 set expandtab
