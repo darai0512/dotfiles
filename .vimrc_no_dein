@@ -1,5 +1,5 @@
 " キー割り当て nmap=nnoremap=Normal-mode key Mapping
-nmap  hx
+" nmap  hx
 " 挿入モード(inor)でのカーソル移動
 inoremap <C-j> <Down>
 inoremap <C-k> <Up>
@@ -16,6 +16,7 @@ se sm
 se ai
 syntax on
 se nu
+nnoremap <silent> <C-m> :<C-u>setlocal number!<CR>
 
 " 基本
 set nocompatible
