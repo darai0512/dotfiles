@@ -19,6 +19,7 @@
   st = status
   ch = checkout
   egrep = "grep --heading --break"
+  showpr = !"f() { git log --merges --oneline --reverse --ancestry-path $1...master | grep 'Merge pull request #' | head -n 1; }; f"
 #  pr = "!pr() { git fetch origin pull/$1/head:pr$1;git checkout pr$1; };pr"
 # [ghq]
 #   root = ~/src
