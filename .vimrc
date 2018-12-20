@@ -55,7 +55,7 @@ call dein#add('cohama/lexima.vim')
 call dein#add('thinca/vim-quickrun')
 call dein#add('osyo-manga/vim-anzu')
 " python
-call dein#add('davidhalter/jedi-vim')
+" call dein#add('davidhalter/jedi-vim')
 call dein#add('nvie/vim-flake8')
 
 " Required:
