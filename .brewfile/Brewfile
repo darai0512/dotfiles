@@ -20,10 +20,11 @@ cask 'cyberduck'
 cask 'docker'
 cask 'imageoptim'
 cask 'java'
+cask 'dbeaver-community' # not work, please install by pkg
 
 ## display
 cask 'insomniax'
-cask 'flux'
+cask 'hyperswitch'
 cask 'shiftit'
 
 ## communication
@@ -31,17 +32,18 @@ cask 'slack'
 cask 'skype'
 
 ## useful
-cask 'alfred'
 cask 'clipy'
 cask 'cmd-eikana' # keyremap4macbook
 cask 'dropbox'
 cask 'the-unarchiver'
 cask 'vlc'
+tap homebrew/cask-drivers
+cask 'logitech-options'
 
-## vagrant
-cask 'virtualbox'
-cask 'vagrant'
-cask 'vagrant-manager'
+## docker is better
+# cask 'virtualbox'
+# cask 'vagrant'
+# cask 'vagrant-manager'
 
 tap homebrew/core
 tap neovim/neovim
@@ -63,6 +65,8 @@ brew maven
 brew tree
 brew certbot
 brew openssl
+brew ffmpeg
+brew go
 
 tap homebrew/versions
 
@@ -70,6 +74,5 @@ tap rcmdnk/file
 brew brew-file
 
 appstore 408981434 iMovie (10.1.4)
-appstore 409183694 Keynote (7.1)
 appstore 539883307 LINE (5.1.1)
 appstore 497799835 Xcode (8.2.1)
