@@ -1,25 +1,23 @@
 # alias
 alias vi="vim"
+alias python="python3"
+alias pip="pip3"
 alias sc='screen'
-alias scr='screen -r'
-alias scd='screen -d'
 alias rm='rm -i'
+alias less='less -R'
 alias ls='ls -G' # for mac
-# if [[ -x `which colordiff` ]]; then
-#   alias diff='colordiff -u'
-# else
-#   alias diff='diff -u'
-# fi
+alias idea='idea > /dev/null 2>&1'
 
+# export GIT_SSH_COMMAND="ssh -i ~/.ssh/id_ecdsa"
 export LSCOLORS=fxfxcxdxbxegedabagacad
-export PS1="\[\033[1;32m\][@\H \w]\n(^o^)/~\$\[\033[0m\]"
-# export VIMRUNTIME=
+export PS1="\[\033[1;32m\][@\w]\n(^o^)/~\$\[\033[0m\]"
+# \H = hostname
 # export MAVEN_HOME=/usr/local/apache-maven-3.2.2
 export PYENV_ROOT="$HOME/.pyenv"
-export PATH=${PYENV_ROOT}/bin:${PATH}:${MAVEN_HOME}/bin:/opt/chefdk/embedded/bin
+export KUBECONFIG=/Users/daikiarai/.kube/config
 
-#eval "$(chef shell-init bash)"
-eval "$(pyenv init -)"
+export PATH=${PYENV_ROOT}/bin:${PATH}:${HOME}/flutter/bin:/Applications/IntelliJ\ IDEA.app/Contents/MacOS:/opt/homebrew/bin
+# :${HOME}/.gem/ruby/2.6.0/bin
 
 # "stty -a"で見れるdef aliases and functionsをいじる
 ## C-sによる画面の停止を無効にする
@@ -66,3 +64,8 @@ export HISTIGNORE="ls:fg*:bg*:history*:pwd:df:df *:cd"
 export HISTCONTROL=ignoredups
 ## ヒストリーに時間も覚えさせる
 export HISTTIMEFORMAT='%Y-%m-%d %T '
+
+
+if [ -f $(brew --prefix)/etc/brew-wrap ];then
+  source $(brew --prefix)/etc/brew-wrap
+fi

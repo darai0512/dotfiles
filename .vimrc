@@ -26,11 +26,9 @@ call dein#begin(s:dein_dir)
 call dein#add('Shougo/dein.vim')
 
 call dein#add('Shougo/vimproc.vim', {'build': 'make'}) " 非同期処理化
-" Add or remove your plugins here:
-call dein#add('Shougo/neocomplcache')
 call dein#add('Shougo/neosnippet.vim') " 補完
 call dein#add('Shougo/neosnippet-snippets')
-call dein#add('Shougo/vimshell', { 'rev': '3787e5' }) " vim 8 default
+" call dein#add('Shougo/vimshell', { 'rev': '3787e5' }) " vim 8 default
 call dein#add('Shougo/unite.vim')
 " call dein#add('Shougo/neomru.vim') Catalina Error, String as a Float
 call dein#add('Shougo/unite-outline')
@@ -56,7 +54,6 @@ call dein#add('thinca/vim-quickrun') " exec: \r , close: Ctrl+w+o or Ctrl-c
 call dein#add('osyo-manga/vim-anzu')
 call dein#add('Shougo/denite.nvim')
 " python
-" call dein#add('davidhalter/jedi-vim')
 call dein#add('nvie/vim-flake8')
 
 " Required:
@@ -68,6 +65,9 @@ endif
 
 " vim-quickrun
 nnoremap <C-c> :only<CR>
+" 削除されたkey mappingを復活
+" https://github.com/thinca/vim-quickrun/commit/e2177d36e2b8b471e8c49c20a05961e349b0a7a6#diff-90db34bf956d442cf9fdb89d743b39d6309b79468fa44e0de29038dd7afb4d3a
+nnoremap <silent> <Leader>r <Plug>(quickrun)
 
 " Required:
 filetype plugin indent on

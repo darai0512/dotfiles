@@ -1,0 +1,75 @@
+# docs: https://homebrew-file.readthedocs.io/en/latest/installation.html
+# this is ~/config/brewfile/Brewfile
+# $brew file install # 差分更新
+# $brew file update # だとこのファイル自体書き換わるので使い分けて
+
+# tap repositories and their packages
+tap rcmdnk/file
+brew brew-file
+# tapall rcmdnk/rcmdnkpac
+tap homebrew/cask
+tap neovim/neovim
+
+# Other Homebrew packages
+# 失敗したらコメントアウトして$brew update && brew install imagemagick
+brew brotli
+brew ca-certificates
+brew ffmpeg
+brew imagemagick
+brew go
+brew helm
+brew jq
+brew kubernetes-cli
+brew maven
+brew node
+brew php
+brew pyenv
+# brew six
+brew sqlite
+brew tree
+brew wget
+brew x264
+brew x265
+brew yarn
+brew awscli
+brew react-native-cli
+# openjdkはパス通す https://formulae.brew.sh/formula/openjdk
+brew openjdk
+# 以下 https://eksctl.io/installation/ では非推奨。xcodeが必要で面倒。unix導入手順が良い
+# tap weaveworks/tap
+# brew weaveworks/tap/eksctl
+
+# Other Cask applications
+cask android-studio
+cask flutter
+cask clipy
+cask cmd-eikana
+cask dbeaver-community
+cask insomnia
+cask intellij-idea
+cask iterm2
+cask logi-options-plus
+cask react-native-debugger
+cask slack
+cask the-unarchiver
+cask vlc
+cask gpg-suite
+cask shiftit
+cask 1password
+cask wireshark
+cask tailscale
+
+# chromeなどはinstall済みだとError終了のためコメントアウト
+# cask google-chrome
+cask google-chrome-canary
+cask brave-browser
+cask firefox
+cask safari-technology-preview
+cask firefox-developer-edition
+
+cask blackhole-2ch
+cask blackhole-16ch
+cask blackhole-64ch
+
+# ログイン求められる。待ちが長い。verが古くないか確認 
+appstore 497799835   Xcode       (10.1)

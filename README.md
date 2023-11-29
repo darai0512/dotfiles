@@ -17,7 +17,8 @@
 ### 2. Finder
 
 - カラム表記
-- ユーザーdirとゴミ箱をよく使う項目へ
+- `ユーザー`やゴミ箱をよく使う項目へ
+  - https://minacoole.com/macbookpro-finder-8/
 - dotfiles表示　https://qiita.com/cs_sonar/items/aa0f0d5ddfbc108e4b8e
 
 ### 3. Terminal
