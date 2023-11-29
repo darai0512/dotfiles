@@ -6,6 +6,8 @@ inoremap <C-k> <Up>
 inoremap <C-l> <Right>
 inoremap <C-h> <Left>
 
+nnoremap q :<C-u>q<CR>
+
 se pastetoggle=<C-z>
 autocmd InsertLeave * set nopaste
 " 上記によるビープ音を削除,フラッシュにしたければset visualbell

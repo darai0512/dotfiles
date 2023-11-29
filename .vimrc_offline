@@ -1,0 +1,47 @@
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
+inoremap <C-h> <Left>
+
+nnoremap q :<C-u>q<CR>
+
+se pastetoggle=<C-z>
+autocmd InsertLeave * set nopaste
+set vb t_vb=
+
+se sm
+se ai
+syntax on
+se nu
+nnoremap <silent> <C-m> :<C-u>setlocal number!<CR>
+
+set nocompatible
+set shiftwidth=2
+set tabstop=2
+set et
+set shellslash
+"set t_kD=
+
+highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=white
+match ZenkakuSpace /　/
+
+highlight Comment ctermfg=Green
+highlight Constant ctermfg=Red
+highlight Identifier ctermfg=208
+highlight Statement ctermfg=Yellow
+highlight Title ctermfg=Magenta
+highlight Special ctermfg=Magenta
+highlight PreProc ctermfg=Magenta
+highlight Visual ctermbg=5
+
+set cmdheight=1
+set laststatus=2
+set showcmd
+set statusline=%F%m%r%h%w\ [TYPE=%Y][ASCII=\%03.3b][ENC=%{&fileencoding}][POS=%04l,%04v]
+
+"mouse
+"set mouse=a
+"set ttymouse=xterm2
+
+set encoding=utf-8
+set fileencodings=utf-8,iso-2022-jp,euc-jp,ucs-2le,ucs-2,cp932

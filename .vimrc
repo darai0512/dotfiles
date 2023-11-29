@@ -30,9 +30,9 @@ call dein#add('Shougo/vimproc.vim', {'build': 'make'}) " 非同期処理化
 call dein#add('Shougo/neocomplcache')
 call dein#add('Shougo/neosnippet.vim') " 補完
 call dein#add('Shougo/neosnippet-snippets')
-call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
+call dein#add('Shougo/vimshell', { 'rev': '3787e5' }) " vim 8 default
 call dein#add('Shougo/unite.vim')
-call dein#add('Shougo/neomru.vim')
+" call dein#add('Shougo/neomru.vim') Catalina Error, String as a Float
 call dein#add('Shougo/unite-outline')
 call dein#add('Shougo/vimfiler')
 call dein#add('itchyny/lightline.vim')
@@ -52,8 +52,9 @@ call dein#add('editorconfig/editorconfig-vim')
 call dein#add('ConradIrwin/vim-bracketed-paste') " se pastetoggle=<C-z>
 call dein#add('stephpy/vim-yaml')
 call dein#add('cohama/lexima.vim')
-call dein#add('thinca/vim-quickrun')
+call dein#add('thinca/vim-quickrun') " exec: \r , close: Ctrl+w+o or Ctrl-c
 call dein#add('osyo-manga/vim-anzu')
+call dein#add('Shougo/denite.nvim')
 " python
 " call dein#add('davidhalter/jedi-vim')
 call dein#add('nvie/vim-flake8')
@@ -64,6 +65,9 @@ call dein#end()
 if dein#check_install()
   call dein#install()
 endif
+
+" vim-quickrun
+nnoremap <C-c> :only<CR>
 
 " Required:
 filetype plugin indent on

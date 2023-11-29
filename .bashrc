@@ -5,11 +5,11 @@ alias scr='screen -r'
 alias scd='screen -d'
 alias rm='rm -i'
 alias ls='ls -G' # for mac
-if [[ -x `which colordiff` ]]; then
-  alias diff='colordiff -u'
-else
-  alias diff='diff -u'
-fi
+# if [[ -x `which colordiff` ]]; then
+#   alias diff='colordiff -u'
+# else
+#   alias diff='diff -u'
+# fi
 
 export LSCOLORS=fxfxcxdxbxegedabagacad
 export PS1="\[\033[1;32m\][@\H \w]\n(^o^)/~\$\[\033[0m\]"
