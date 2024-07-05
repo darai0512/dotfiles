@@ -3,73 +3,232 @@
 # $brew file install # 差分更新
 # $brew file update # だとこのファイル自体書き換わるので使い分けて
 
-# tap repositories and their packages
-tap rcmdnk/file
-brew brew-file
-# tapall rcmdnk/rcmdnkpac
-tap homebrew/cask
-tap neovim/neovim
 
-# Other Homebrew packages
-# 失敗したらコメントアウトして$brew update && brew install imagemagick
+# tap repositories and their packages
+
+tap homebrew/core
+brew aom
+brew apr
+brew apr-util
+brew argon2
+brew aribb24
+brew aspell
+brew autoconf
+brew automake
+brew awscli
 brew brotli
+brew c-ares
 brew ca-certificates
+brew cairo
+brew cffi
+brew cjson
+brew curl
+brew dav1d
+brew docutils
 brew ffmpeg
-brew imagemagick
+brew flac
+brew fontconfig
+brew freetds
+brew freetype
+brew frei0r
+brew fribidi
+brew gd
+brew gettext
+brew ghostscript
+brew giflib
+brew glib
+brew gmp
+brew gnutls
 brew go
+brew graphite2
+brew harfbuzz
 brew helm
+brew highway
+brew icu4c
+brew imagemagick
+brew imath
+brew jasper
+brew jbig2dec
+brew jpeg-turbo
+brew jpeg-xl
 brew jq
+brew k9s
+brew krb5
 brew kubernetes-cli
+brew lame
+brew leptonica
+brew libarchive
+brew libass
+brew libavif
+brew libb2
+brew libbluray
+brew libde265
+brew libevent
+brew libgit2
+brew libheif
+brew libidn
+brew libidn2
+brew liblqr
+brew libmicrohttpd
+brew libnghttp2
+brew libogg
+brew libomp
+brew libpng
+brew libpq
+brew libraw
+brew librist
+brew libsamplerate
+brew libsndfile
+brew libsodium
+brew libsoxr
+brew libssh2
+brew libtasn1
+brew libtiff
+brew libtool
+brew libunibreak
+brew libunistring
+brew libuv
+brew libvidstab
+brew libvmaf
+brew libvorbis
+brew libvpx
+brew libx11
+brew libxau
+brew libxcb
+brew libxdmcp
+brew libxext
+brew libxrender
+brew libzip
+brew little-cms2
+brew llvm
+brew lz4
+brew lzo
+brew m4
+brew mas
 brew maven
+brew mbedtls
+brew minikube
+brew mpdecimal
+brew mpg123
+brew nettle
 brew node
+brew oniguruma
+brew opencore-amr
+brew openexr
+brew openjdk
+brew openjpeg
+brew openldap
+brew openssl@3
+brew opus
+brew p11-kit
+brew pango
+brew pcre2
 brew php
+brew pixman
+brew pkg-config
+brew pycparser
 brew pyenv
-# brew six
+brew python-setuptools
+brew python@3.11
+brew python@3.12
+brew rav1e
+brew react-native-cli
+brew readline
+brew rtmpdump
+brew rubberband
+brew rust
+brew sdl2
+brew shared-mime-info
+brew six
+brew snappy
+brew speex
+brew spoof-mac
 brew sqlite
+brew srt
+brew svt-av1
+brew tesseract
+brew theora
+brew tidy-html5
 brew tree
+brew unbound
+brew unixodbc
+brew webp
 brew wget
 brew x264
 brew x265
+brew xorgproto
+brew xvid
+brew xz
 brew yarn
-brew awscli
-brew react-native-cli
-# openjdkはパス通す https://formulae.brew.sh/formula/openjdk
-brew openjdk
-# 以下 https://eksctl.io/installation/ では非推奨。xcodeが必要で面倒。unix導入手順が良い
-# tap weaveworks/tap
-# brew weaveworks/tap/eksctl
+brew z3
+brew zeromq
+brew zimg
+brew zstd
 
-# Other Cask applications
+tap homebrew/cask
+cask 1password
 cask android-studio
-cask flutter
+cask blackhole-16ch
+cask blackhole-2ch
+cask blackhole-64ch
+cask brave-browser
 cask clipy
 cask cmd-eikana
 cask dbeaver-community
+cask firefox
+cask flutter
+cask gpg-suite
 cask insomnia
 cask intellij-idea
 cask iterm2
 cask logi-options-plus
+cask ngrok
 cask react-native-debugger
+cask shiftit
 cask slack
+cask tailscale
 cask the-unarchiver
 cask vlc
-cask gpg-suite
-cask shiftit
-cask 1password
 cask wireshark
-cask tailscale
 
-# chromeなどはinstall済みだとError終了のためコメントアウト
-# cask google-chrome
-cask google-chrome-canary
-cask brave-browser
-cask firefox
-cask safari-technology-preview
+tap homebrew/cask-versions
 cask firefox-developer-edition
+cask google-chrome-canary
+cask safari-technology-preview
 
-cask blackhole-2ch
-cask blackhole-16ch
-cask blackhole-64ch
+tap argon/mas
 
-# ログイン求められる。待ちが長い。verが古くないか確認 
-appstore 497799835   Xcode       (10.1)
+tap neovim/neovim
+
+tap ngrok/ngrok
+
+tap rcmdnk/file
+brew brew-file
+
+tap rcmdnk/rcmdnkpac
+brew chatgpt-prompt-wrapper
+brew ec2
+brew gcp-tools
+brew git-gpt-commit
+brew multi_clipboard
+brew open_newtab
+brew rcmdnk-sshrc
+brew rcmdnk-trash
+brew screenutf8
+brew sentaku
+brew shell-explorer
+brew shell-logger
+brew smenu
+brew stow_reset
+
+# Other Homebrew packages
+brew python-docopt
+
+# App Store applications
+appstore 682658836 GarageBand (10.4.8)
+appstore 408981434 iMovie (10.3.9)
+appstore 409183694 Keynote (13.1)
+appstore 409203825 Numbers (13.1)
+appstore 409201541 Pages (13.1)
+appstore 1475387142 Tailscale (1.64.0)
+appstore 497799835 Xcode (15.3)
