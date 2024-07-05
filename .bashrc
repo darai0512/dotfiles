@@ -16,6 +16,10 @@ export PS1="\[\033[1;32m\][@\w]\n(^o^)/~\$\[\033[0m\]"
 export PYENV_ROOT="$HOME/.pyenv"
 export KUBECONFIG=/Users/daikiarai/.kube/config
 
+# use default
+# export GOPATH="$HOME/go"
+# export GOBIN=$GOPATH/bin
+
 export PATH=${PYENV_ROOT}/bin:${PATH}:${HOME}/flutter/bin:/Applications/IntelliJ\ IDEA.app/Contents/MacOS:/opt/homebrew/bin
 # :${HOME}/.gem/ruby/2.6.0/bin
 
