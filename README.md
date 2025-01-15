@@ -45,17 +45,18 @@ Terminal
   - 透過: Profile->text->background->不透明度
 - [HomeBrew](https://brew.sh/) by curl
   - v15.2 から？homebrewを入れるためにxcode commandline toolが事前に必要かも。その場合、端末でappleidログインし、brewfileでxcodeを入れるのを諦めて、先にxcodeを導入してからcurlする
-- `$brew install rcmdnk/file/brew-file` && `$pbpaste > ~/.config/brewfile/Brewfile` && `$brew file install`
-- brew-file入れたら.bashrcを https://homebrew-file.readthedocs.io/en/latest/installation.html
-- 移行元の操作 https://homebrew-file.readthedocs.io/en/latest/getting_started.html
-- kitting設定とのバッティングしないように注意
+- `$brew install rcmdnk/file/brew-file`
+  - .bashrc: https://homebrew-file.readthedocs.io/en/latest/installation.html
+- `$pbpaste > ~/.config/brewfile/Brewfile`
+  - 移行元から持ってくる場合： https://homebrew-file.readthedocs.io/en/latest/getting_started.html
+- `$brew file install`
 
 ### 4. 各アプリを起動&設定、dotfilesも
 
 - 英かな
   - KeyRemapと除外アプリ設定
-  - Appleシリコンでも動く、ありがたや
-- .gitconfig
+  - Appleシリコンでも動く。ただし、M4から？、rosettaが求められる。
+- add `.gitconfig` , `.gitignore_global`
 - AirDropで設定移行
   - スティッキーズ
   - Clipy snipet.txt
