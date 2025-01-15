@@ -4,6 +4,9 @@
 ## M4 Pro on 202411 v15.2
 ### 1. Preference
 
+- デスクトップとDock
+  - dockの位置と開閉
+  - 勝手に拡大をさせない: https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q12306044942
 - キーボード
   - リピート速度: 矢印キーの移動を早くしたいので最も短く
   - 音声入力ショートカット変更: Ctrl * 2
