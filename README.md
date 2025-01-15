@@ -1,34 +1,54 @@
 # unix系デバイス移行
-## 2018MBP to Apple M3 Pro on 20231120
-
 新デバイス側で設定・移行した方法
 
+## M4 Pro on 202411 v15.2
 ### 1. Preference
 
-- キーボードリピート速度
-- キーボードショートカット -> 修飾キー：capslock to ctrl
-- トラックパッドで3本指ドラッグ　https://support.apple.com/ja-jp/HT204609
-- 色温度
-- IME設定からKeyboard入力で先頭自動大文字の解除
-- bluetoothをメニューバーに：コントロールセンター
-  - mouseなど設定して切り替え
-- 時計を秒まで表示：コントロールセンター
+- キーボード
+  - リピート速度: 矢印キーの移動を早くしたいので最も短く
+  - 音声入力ショートカット変更: Ctrl * 2
+- キーボードショートカット
+  - 修飾キー：capslock to ctrl
+  - 入力ソース（IME設定）：Keyboard入力で先頭自動大文字の解除
+- 3本指で検索(多分アクセシビリティの中)
+  - ドラッグキー：トラックパッドで3本指ドラッグ　https://support.apple.com/ja-jp/HT204609
+- Night Shift
+  - 色温度と時間帯
+- コントロールセンター
+  - bluetoothをメニューバーに表示
+  - 時計を秒まで表示
+
+cf. 2018MBP to Apple M3 Pro on 20231120 の場合
+
+（同上）
 
 ### 2. Finder
 
 - カラム表記
-- `ユーザー`やゴミ箱をよく使う項目へ
-  - https://minacoole.com/macbookpro-finder-8/
-- dotfiles表示　https://qiita.com/cs_sonar/items/aa0f0d5ddfbc108e4b8e
+- 設定
+  - デフォルトディレクトリを `ユーザー` に変更
+- よく使う項目
+  - add `ユーザー`
+  - add ゴミ箱: https://minacoole.com/macbookpro-finder-8/
+  - delete 最近の項目
+- dotfiles表示(`Cmd+Shift+.`)　https://qiita.com/cs_sonar/items/aa0f0d5ddfbc108e4b8e
 
-### 3. Terminal
+### 3. アプリ
 
-- default shellをbashに
-  - https://zenn.dev/akido_/articles/7c9638e164b847
-- [HomeBrew](https://brew.sh/) && `$brew install rcmdnk/file/brew-file` && `$pbpaste > ~/config/brewfile/Brewfile` && `$brew file install`
-  - brew-file入れたら.bashrcを https://homebrew-file.readthedocs.io/en/latest/installation.html
-  - 移行元の操作 https://homebrew-file.readthedocs.io/en/latest/getting_started.html
-  - kitting設定とのバッティングしないように注意
+Safari->GitHub
+
+Terminal
+
+- コマンドでdefault shellをbashに: https://zenn.dev/akido_/articles/7c9638e164b847
+  - 設定「開くシェル」は「デフォルトの〜」で良い
+- 設定
+  - 透過: Profile->text->background->不透明度
+- [HomeBrew](https://brew.sh/) by curl
+  - v15.2 から？homebrewを入れるためにxcode commandline toolが事前に必要かも。その場合、端末でappleidログインし、brewfileでxcodeを入れるのを諦めて、先にxcodeを導入してからcurlする
+- `$brew install rcmdnk/file/brew-file` && `$pbpaste > ~/.config/brewfile/Brewfile` && `$brew file install`
+- brew-file入れたら.bashrcを https://homebrew-file.readthedocs.io/en/latest/installation.html
+- 移行元の操作 https://homebrew-file.readthedocs.io/en/latest/getting_started.html
+- kitting設定とのバッティングしないように注意
 
 ### 4. 各アプリを起動&設定、dotfilesも
 
