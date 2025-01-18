@@ -1,5 +1,4 @@
-
-# tap repositories and their packages
+# cask safari-technology-preview  # 不安定なため削除
 
 tap homebrew/core
 brew aom
@@ -11,18 +10,27 @@ brew aspell
 brew autoconf
 brew automake
 brew awscli
+brew boost
 brew brotli
 brew c-ares
 brew ca-certificates
 brew cairo
 brew cffi
 brew cjson
+brew cocoapods
 brew cryptography
 brew curl
 brew dav1d
 brew docutils
+brew double-conversion
+brew edencommon
+brew fb303
+brew fbthrift
 brew ffmpeg
+brew fizz
 brew flac
+brew fmt
+brew folly
 brew fontconfig
 brew freetds
 brew freetype
@@ -30,9 +38,11 @@ brew frei0r
 brew fribidi
 brew gd
 brew gettext
+brew gflags
 brew ghostscript
 brew giflib
 brew glib
+brew glog
 brew gmp
 brew gnutls
 brew go
@@ -96,6 +106,7 @@ brew libxcb
 brew libxdmcp
 brew libxext
 brew libxrender
+brew libyaml
 brew libzip
 brew little-cms2
 brew llvm
@@ -136,6 +147,7 @@ brew react-native-cli
 brew readline
 brew rtmpdump
 brew rubberband
+brew ruby
 brew rust
 brew sdl2
 brew shared-mime-info
@@ -152,12 +164,16 @@ brew tidy-html5
 brew tree
 brew unbound
 brew unixodbc
+brew uv
+brew wangle
+brew watchman
 brew webp
 brew wget
 brew x264
 brew x265
 brew xorgproto
 brew xvid
+brew xxhash
 brew xz
 brew yarn
 brew z3
@@ -175,6 +191,7 @@ cask brave-browser
 cask clipy
 cask cmd-eikana
 cask dbeaver-community
+cask docker
 cask firefox
 cask firefox@developer-edition
 cask flutter
